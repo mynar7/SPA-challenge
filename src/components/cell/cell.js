@@ -11,7 +11,7 @@ const Cell = props => {
             data-img-id={props.imgId}
             data-row={props.row}
             src={props.src}
-            alt={`ID number: ${props.id}`}
+            alt={`ID#: ${props.imgId}`}
             onMouseOver={e => props.fx(e)}
         />
     )

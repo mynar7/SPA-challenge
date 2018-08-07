@@ -14,6 +14,7 @@ class App extends Component {
         $.get("https://picsum.photos/list")
             .then(res => {
                 let images = res.data
+                // randomize returned images and grab 18 for use
                     .sort(() => 0.5 - Math.random())
                     .slice(0, 18)
                     .map((x, i) => {
@@ -21,26 +22,30 @@ class App extends Component {
                             id: x.id,
                             gray: `https://picsum.photos/g/512/288/?image=${x.id}`,
                             color: `https://picsum.photos/512/288/?image=${x.id}`,
+                            //enlarge two images to start
                             enlarged: i === 3 || i === 10 ? true : false
                         }
                     })
-                console.log(images);
+                //split images into two arrays, one for each container
                 this.setState({
                     imageRow1: images.slice(0, 9),
                     imageRow2: images.slice(9, 18)
                 });
             })
     }
-
+    //function to pass down for mouseover behavior
     sizeUp = (e) => {
+        //grab info for row/id# and determine which array in state to update
         let id = e.target.getAttribute("data-img-id")
         let rowNum = e.target.getAttribute("data-row");
         let imgRw = "imageRow" + rowNum;
         let stateImgArr = this.state[imgRw];
+
         //declare variables to store target and previous target
         let focusItemIndex;
         let prevEnlargedIndex;
 
+        //iterate over images in container
         let enlargedItemArr = stateImgArr.map((x, i) => {
             //find currently enlarged img
             if(x.enlarged) prevEnlargedIndex = i;
@@ -50,6 +55,7 @@ class App extends Component {
             if(id === x.id.toString()) focusItemIndex = i;
             return x;
         })
+
         //if target is on bottom row of imgs,
         //splice focused item into array to display in top row
         //below algorithm keeps the enlarged image under the mouse cursor
