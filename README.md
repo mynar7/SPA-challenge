@@ -27,7 +27,7 @@ The Challenge was to implement an app that behaved similarly to a video of an ap
 1. **Because images fill holes in the grid, it was impossible to maintain the original shape of the container with CSS alone.**  
   I tried to implement a solution with CSS transitions and the hover psuedo-element. I was able to resize the images but I couldn't maintain the desired layout.  
   I tried to wrap the elements with flex-box which worked moderately well but again left holes in the grid.  
-  I realized I had a two-dimensional layout and had previously heard of a property of Grid that filled empty space in a layout, decided to reach for CSS Grid. I gave myself a crash-course in Grid layouts and used `grid-auto-flow: dense` to fill holes in the layout.  
+  I realized I had a two-dimensional layout. I had previously heard of a property of Grid that filled empty space in a layout, and decided to reach for CSS Grid. I gave myself a crash-course in Grid layouts and used `grid-auto-flow: dense` to fill holes in the layout.  
   
 1. **I realized that while I was filling holes when hovering over top-row images, when I enlarged images from the bottom row they would enlarge in place and the remaining images would flow afterward.**  
   I attempted to modify the `order` CSS property to pull bottom row images upward.  
