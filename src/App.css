@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 800px;
+    background-color: black;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    background-color: #dddddd;
+    width: 100%;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(6, 256px);
+    grid-template-rows: 144px 144px;
+    grid-auto-flow: dense;
+}

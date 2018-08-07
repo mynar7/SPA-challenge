@@ -1,0 +1,11 @@
+.cell {
+    width: 256px;
+    transition: width 500ms ease-out;
+    align-self: center;
+}
+
+.enlarged1, .enlarged2 {
+    width: 512px;
+    grid-column: span 2;
+    grid-row: span 2;
+}
