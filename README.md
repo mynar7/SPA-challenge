@@ -39,7 +39,8 @@ The Challenge was to implement an app that behaved similarly to a video of an ap
   I wrote an algorithm that moved each bottom row image according to what image was enlarged, and what position the to-be-enlarged image was to be in:
   >If the to-be-enlarged image's index minus the currently-enlarged-image's index equals four,
   > move the to-be-enlarged image 5 places higher in the image array. 
-  >Else, move it 4 places higher.
+  >Else, move it 4 places higher.  
+  
   This algorithm kept the images underneath the mouse cursor allowing the use of a hover vs click listener and prevented the need for a debounce function.
   
 ## Improvements and Stray Thoughts:
