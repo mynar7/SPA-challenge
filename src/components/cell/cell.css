@@ -2,6 +2,7 @@
     width: 256px;
     transition: width 500ms ease-out;
     align-self: center;
+    justify-self: center;
 }
 
 .enlarged1, .enlarged2 {
