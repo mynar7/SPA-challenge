@@ -48,7 +48,7 @@ The Challenge was to implement an app that behaved similarly to a video of an ap
 1. The app is not mobile responsive.
 1. Occasionally the API will return a broken image. I haven't found a clean solution to check for broken images with JS. I could pick a set of 18 working images at the start, but the image variety is worth the tradeoff having to refresh the app to get new images.
 1. Images are currently animated using CSS transitions and because of the nature of Grid containers, are set to fixed widths. If not set to a fixed size, the images will expand the grid containers beyond their set size.
-1. I was not able to attempt background color transitions because I could not find an API that return transparent image URLs. I do not think I would have been able to animate color changes with CSS alone.
+1. I was not able to attempt background color transitions because I could not find an API that returned transparent image URLs. I do not think I would have been able to animate color changes with CSS alone.
 1. The App does not fill the window size like in the video. This was not explicit in the specification and would be difficult to implement for varying screen sizes with my use of CSS transitions and fixed widths of images.
-1. Smaller images also do not follow a specifc rearrangement pattern as they appear to do in the video. The top container's images appear to slide left/right and down to accompany, and the bottom container's left/right and up.
+1. Smaller images also do not follow a specifc rearrangement pattern as they appear to do in the video. The video shows the top container's images sliding left/right and down to accompany, and the bottom container's left/right and up.
 1. This was a challenging build! At first blush I thought it would be difficult but doable, but in the end it gave me more trouble than I had first imagined.
