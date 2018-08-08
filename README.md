@@ -11,7 +11,7 @@ The Challenge was to implement an app that behaved similarly to a video of an ap
 * Some images share a background color.
 * Images resume normal size when the cursor leaves.
 * Images can cross between the top row and bottom row of their container.
-* Order of images is not preserved. Image order is augumented each time an image resizes.
+* Order of images is not preserved. Image order is augmented each time an image resizes.
 * One image in each container is enlarged at the start of the video.
 * Large images have a slight bounce animation when they change positions in the grid.
 * Small images have a slide animation when they change positions.
