@@ -20,7 +20,6 @@ class App extends Component {
                     .map((x, i) => {
                         return {
                             id: x.id,
-                            gray: `https://picsum.photos/g/512/288/?image=${x.id}`,
                             color: `https://picsum.photos/512/288/?image=${x.id}`,
                             //enlarge two images to start
                             enlarged: i === 3 || i === 10 ? true : false
@@ -76,7 +75,7 @@ class App extends Component {
         this.setState({
             [imgRw]: enlargedItemArr
         })
-        
+
     }
 
 
@@ -88,9 +87,9 @@ class App extends Component {
                         this.state.imageRow1.map(x => {
                             return <Cell
                                 row={1}
-                                key={x.id} 
+                                key={x.id}
                                 imgId={x.id}
-                                src={x.enlarged ? x.color : x.gray}
+                                src={x.color}
                                 className={x.enlarged ? "cell enlarged1" : "cell"}
                                 fx={this.sizeUp}
                             />
@@ -102,9 +101,9 @@ class App extends Component {
                         this.state.imageRow2.map(x => {
                             return <Cell
                                 row={2}
-                                key={x.id} 
-                                imgId={x.id}                            
-                                src={x.enlarged ? x.color : x.gray}
+                                key={x.id}
+                                imgId={x.id}
+                                src={x.color}
                                 className={x.enlarged ? "cell enlarged2" : "cell"}
                                 fx={this.sizeUp}
                             />

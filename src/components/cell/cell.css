@@ -1,13 +1,15 @@
 .cell {
     width: 256px;
-    transition: width 500ms ease-out;
+    transition: width 500ms, filter 1000ms;
     align-self: center;
     justify-self: center;
     cursor: pointer;
+    filter: grayscale(1);
 }
 
 .enlarged1, .enlarged2 {
     width: 512px;
     grid-column: span 2;
     grid-row: span 2;
+    filter: none;
 }
